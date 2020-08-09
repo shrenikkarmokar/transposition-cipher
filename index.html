@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  <title>Transposition Cipher</title>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light navigation-area ">
+    <a class="navbar-brand nav-link disabled" href="#">
+      <spam>Transposition Cipher<spam>
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto ">
+        <li class="nav-item">
+          <a class="nav-link" href="#code-part">Code</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#working">Working</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://shrenikkarmokar.github.io/shrenik/">My sites</a>
+        </li>
+
+      </ul>
+    </div>
+  </nav>
+
+  <div class="header">
+    <p>In cryptography, a Transposition cipher is a method of encryption by which the positions held by units of plaintext are shifted according to a regular system, so that the ciphertext constitutes a permutation of the plaintext.</p>
+    <em><b>Note:</b> Requirement is numpy Lib</em>
+
+    <div class="context">
+      <p><b>How it will Look:</b></p>
+      <div class="output">
+        <p>1.Encrypt 2.Decrypt</p>
+        <p>Enter Your choice: 1</p>
+        <p>Enter Your plain Text: Transposition Cipher</p>
+        <p>Your Cipher Text is: TasoiinihrrnpstoCpe</p><br>
+        <p>1.Encrypt 2.Decrypt</p>
+        <p>Enter Your choice: 2</p>
+        <p>Enter Your plain Text: TasoiinihrrnpstoCpe</p>
+        <p>TranspositionCipher</p>
+      </div>
+      <p><b>Input</b></p>
+      <ul>
+        <li>Chose to Encrypt or Decrypt</li>
+        <li>A String of both lower and upper case letters, called PlainText.</li>
+      </ul>
+      <div id="working">
+        <p><b>How its working</b></p>
+        <p><b><em>Encrypt</em></b></p>
+        <ul>
+          <li>Remove all white space and convert it to list then numpy array</li>
+          <li>Divide the the length of string to 2 so that we can creat a matrix of n1X2</li>
+          <li>Extracting and combining all the first elemnt of matrix with other and converting them to string which will be same for second element</li>
+          <li>Add white space at end if length of string is odd</li>
+        </ul><br>
+        <p><b><em>Decrypt</em></b></p>
+        <ul>
+          <li>Remove all white space and convert it to list</li>
+          <li>Divide the the length of string to 2 so that we can< find the index of middle elemnt</li>
+          <li>Add white space at end if length of string is odd</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="row name">
+      <div class="col-lg-6 col-md-6">
+        <table class="table">
+          <th>Code</th>
+          <tr>
+            <td><code>s = plain_text.replace(" ", "")</code></td>
+          </tr>
+          <tr>
+            <td><code>lst = list(s)</code></td>
+          </tr>
+          <tr>
+            <td><code>n1 = int((len(lst)/2))</code></td>
+          </tr>
+          <tr>
+            <td><code>arr1 = np.array(lst)</code></td>
+          </tr>
+          <tr>
+            <td><code>cypher_1 = [row[0] for row in arr2]</code></td>
+          </tr>
+          <tr>
+            <td><code>cypher_2 = [row[1] for row in arr2]</code></td>
+          </tr>
+          <tr>
+            <td><code>part_1 =(''.join(map(str, cypher_1)))</code></td>
+          </tr>
+          <tr>
+            <td><code>part_2 =(''.join(map(str, cypher_2)))</code></td>
+          </tr>
+          <tr>
+            <td><code>s1 = s+" "</code></td>
+          </tr>
+          <tr>
+            <td><code>n = int(len(lst)/2)</code></td>
+          </tr>
+          <tr>
+            <td><code>print(x, end="")</code></td>
+          </tr>
+        </table>
+      </div>
+      <div class="col-lg-6 col-md-6">
+        <table class="table">
+          <th>Explanation</th>
+          <tr>
+            <td>This remove any white space from input text, helps to make easy extract only element</td>
+          </tr>
+          <tr>
+            <td>Converts to list</td>
+          </tr>
+          <tr>
+            <td>To find the exact reshap value of matrix</td>
+          </tr>
+          <tr>
+            <td>onverts to numpy array</td>
+          </tr>
+          <tr>
+            <td>To extract all the first element of matrix </td>
+          </tr>
+          <tr>
+            <td>To extract all the second element of matrix </td>
+          </tr>
+          <tr>
+            <td>To combine all first element of matrix and convert to string</td>
+          </tr>
+          <tr>
+            <td>To combine all second element of matrix and convert to string</td>
+          </tr>
+          <tr>
+            <td>To make the input string length even by adding whitespace</td>
+          </tr>
+          <tr>
+            <td>To find the index of second half to decrypt</td>
+          </tr>
+          <tr>
+            <td>To print for loop in single line</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+
+    <div id="code-part">
+
+      <code class="keyword">import</code>numpy<code class="keyword">as</code> np<br>
+
+      print(<code class="quotation-text">"1.Encrypt 2.Decrypt"</code>) <br>
+      choice = int(input(<code class="quotation-text">"Enter Your choice"</code>))<br>
+      <code class="keyword">if</code> choice == <code class="numerical">1</code> class="plain_text">:
+      <div class="indentation_1">
+        plain_text = input(<code class="quotation-text">"Enter Your plain Text: "</code>)<br>
+        s = plain_text.replace(<code class="quotation-text">" "</code>,<code class="quotation-text">""</code>) <br>
+        lst = list(s) <br>
+        n1 = int((len(lst)/<code class="numerical">2</code>))<br>
+        arr1 = np.array(lst) <br>
+        <code class="keyword">if </code>(len(arr1)%<code class="numerical">2</code>)== <code class="numerical">0</code>:
+        <div class="indentation_1">
+          arr2 = np.resize(arr1, (n1,<code class="numerical">2</code>)) <br>
+          cypher_1 = [row[<code class="numerical">0</code>]<code class="keyword"> for</code> row <code class="keyword"> in</code> arr2]<br>
+          cypher_2 = [row[<code class="numerical">1</code>]<code class="keyword"> for</code> row <code class="keyword"> in</code> arr2]<br>
+          part_1 =(<code class="quotation-text">''</code>.join(map(str, cypher_1)))<br>
+          part_2 =(<code class="quotation-text">''</code>.join(map(str, cypher_2)))<br>
+          print(<code class="quotation-text">f"Your Cipher Text is: </code><code class="keyword">{</code>part_1<code class="keyword">}{</code>part_2<code class="keyword">}</code><code class="quotation-text">"</code>)
+        </div>
+        <code class="keyword">else:</code>
+        <div class="indentation_1">
+          s1 = s+<code class="quotation-text">" "</code> <br>
+          lst = list(s1) <br>
+          n1 = int((len(lst)/<code class="numerical">2</code>)) <br>
+          arr1 = np.array(lst) <br>
+          arr2 = np.resize(arr1, (n1,<code class="numerical">2</code>)) <br>
+          cypher_1 = [row[<code class="numerical">0</code>]<code class="keyword"> for</code> row <code class="keyword"> in</code> arr2]<br>
+          cypher_2 = [row[<code class="numerical">1</code>]<code class="keyword"> for</code> row <code class="keyword"> in</code> arr2]<br>
+          part_1 =(<code class="quotation-text">''</code>.join(map(str, cypher_1)))<br>
+          part_2 =(<code class="quotation-text">''</code>.join(map(str, cypher_2)))<br>
+          print(<code class="quotation-text">f"Your Cipher Text is: </code><code class="keyword">{</code>part_1<code class="keyword">}{</code>part_2<code class="keyword">}</code><code class="quotation-text">"</code>)
+        </div>
+      </div>
+      <code class="keyword">elif</code> choice == <code class="numerical">2</code>:
+      <div class="indentation_1">
+        cipher_text = input(<code class="quotation-text">"Enter Your Cipher Text"</code>)<br>
+        s = cipher_text.replace(<code class="quotation-text">" "</code><code , <code class="quotation-text">""</code>)<br>
+        lst = list(s)<br>
+        <code class="keyword">if </code>len(lst)%<code class="numerical">2</code> ==0: <br>
+        <div class="indentation_1">
+          n = int(len(lst)/<code class="numerical">2</code>) <br>
+          i = <code class="numerical">0</code> <br>
+          n1 = <code class="numerical">0</code> <br>
+          <code class="keyword">for</code> i in <code class="keyword">range</code>(n): <br>
+          x = <code class="quotation-text">f"</code><code class="keyword">{</code>lst[i]<code class="keyword">}{</code>lst[n1+n]<code class="keyword">}</code><code class="quotation-text">"</code> <br>
+          n1 = n1+<code class="numerical">1</code> <br>
+          print(x, end=<code class="quotation-text">""</code>)
+        </div>
+      </div>
+      else:
+      <div class="indentation_1">
+        s1 = s+<code class="quotation-text">" "</code><br>
+        lst = list(s1) <br>
+        n = int(len(lst)/<code class="numerical">2</code>) <br>
+        i = <code class="numerical">0</code><br>
+        n1 = <code class="numerical">0</code> <br>
+        <code class="keyword">for</code> i in <code class="keyword">range</code>(n): <br>
+        x = <code class="quotation-text">f"</code><code class="keyword">{</code>lst[i]<code class="keyword">}{</code>lst[n1+n]<code class="keyword">}</code><code class="quotation-text">"</code> <br>
+        n1 = n1+<code class="numerical">1</code> <br>
+        print(x, end=<code class="quotation-text">""</code>)
+      </div>
+      <code class="keyword">else</code>:
+      <div class="indentation_1">
+        print(<code class="quotation-text">"Error Errror....................Check Your choice"</code>) <br>
+      </div>
+
+
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+</body>
+
+</html>

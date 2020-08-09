@@ -1,0 +1,64 @@
+body {
+  background-color: #eeeeee;
+
+}
+spam{
+  font-size: 2rem;
+  padding-left: 3%
+}
+ul{
+  padding-right: 7%
+}
+
+.navigation-area {
+  text-align: center;
+  padding: 0 7%;
+  background-color: #32e0c4;
+}
+.context{
+  margin-top: 4%;
+}
+.output{
+  background-color: #e4e3e3;
+  padding: 2% 5%;
+}
+.header{
+  margin-top: 2rem;
+  font-size: 1rem;
+  padding: 0 7%;
+}
+
+#code-part{
+  background-color: #2B2B2B;
+  color: #8C9497;
+  padding: 2%
+}
+
+.keyword{
+  color:#9B684C;
+}
+.quotation-text{
+  color: #4D5D41;
+}
+.numerical{
+  color:#687982;
+}
+.indentation_1{
+  padding-left: 1%;
+
+}
+.name{
+  margin: 3%;
+}
+@media (max-width:375px){
+  spam{
+    font-size: 1.5rem;
+    padding-left: 3%
+  }
+}
+@media (max-width:320px){
+  spam{
+    font-size: 1rem;
+    padding-left: 1%
+  }
+}
